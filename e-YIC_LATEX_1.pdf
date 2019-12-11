@@ -1,0 +1,108 @@
+\documentclass[a4paper,9pt,left align]{report}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+	\graphicspath{F:/latex}
+	\begin{figure}[t]
+		
+		\includegraphics[width=300pt]{EyantraLogoLarge.png}
+		\centering
+		\vspace{60pt}
+		
+
+		
+	\end{figure}
+\begin{center}
+	
+	\huge \textbf{\underline{e-Yantra Ideas Competition 2019-20}}
+\end{center}
+\vspace{60pt}
+\centering
+\huge \textbf{TEAM ID:}\\
+\huge \textbf{1039}
+
+\vspace{60pt}
+
+	\centering
+\huge \textbf{\underline{PROJECT NAME}}\\
+\vspace{30pt}
+\centering
+\huge{\textbf{AI Based smart monitoring and automatic traffic signalling system }
+	\Large
+	\pagenumbering{arabic}
+	\tableofcontents
+	\pagenumbering{arabic}
+	\newpage
+	\begin{flushleft}
+		\section{\huge Introduction/Motivation:}
+		Traffic occurs when the flow of vehicles on a road is interrupted due to some reasons for a particular interval or period of time. This occurs when the number of vehicles in a particular area exceeds the maximum handling capacity of the roads. Traffic congestion is a common and daily problem in major cities. \\Traffic management in densely populated areas is a huge problem with a lot of challenges. One of the most fundamental of those challenges happens at road intersections where multiple streams of vehicles and pedestrians need to safely cross each other's paths. Road congestion and traffic problems can be solved using real-time video processing and AI detection for emergency services.\\Real-time video processing will help to find the present situation of the traffic at that point of time and based on that situation, the traffic signalling system will change accordingly and the first priority will be given for the emergency services.
+		\newpage
+		\section{\huge Market Research / Literature Survey:} 
+		On an average, Indians bought nearly 54,000 vehicles each day of calendar 2018 against just about 18,000 a day, a decade back. In January 2019, more than a million-and-half (1,607,315) new vehicles were bought and registered with various regional transport offices across the country. India's road network (including national highways etc) has grown by just about a third in the last decade whereas vehicle registrations have increased by almost three times[1]. India and it's financial capital Mumbai pipped other cities to become the most carcongested city in India as the density of private cars soared by 18 per cent in just two years Every day, 700 new vehicles hit Mumbai roads. Mumbai is India's most car-congested city with 510 cars per kilometre. Transport experts fear that traffic snarls are here to stay with most roads dug up for Metro construction or sewerage works.
+		  
+		\section{\huge Requirements}
+		\subsection{\large Hardware Requirement}
+		\begin{itemize}
+			\item Multipurpose cameras (x 4) 
+			 \item Raspberry Pi (x 4) 
+			 \item Memory cards (x 4) 
+			\end{itemize}
+		\subsection{\large Software Requirement}
+		\begin{itemize}
+		
+		\item  OpenCV for real time video processing  \item Tensor flow 
+	\end{itemize}
+\newpage
+\section{\huge Implementation}
+		\subsection{{\LARGE Block Diagram}}
+		\begin{flushleft}
+			
+		
+		\begin{figure}[h]
+			\centering
+			\includegraphics[width=400pt,scale=10,angle=0]{tempsnip.png}
+		\end{figure}
+	\end{flushleft}
+	The camera will provide live video feed to the control unit. The control unit ( we are using raspberry pi)  will process the input with real time video processing and take action depending on the situation. It will prioritise the road with maximum traffic or a road which has a stuck emergency vehicle. The control unit will change the traffic signal accordingly. 
+	\subsection{\LARGE Video Processing}
+	Real time video processing is used for determination of traffic. By using OpenCV we can create virtual boxes on road. There are at least three virtual box is created. If the vehicle enters into the box the camera will detect the box is filled . If all the boxes are filled the camera will detect there is traffic on that particular lane.
+	\newpage
+	\begin{figure}[h]
+		\includegraphics{Capture.png}
+		\caption{Basic representation of how system is implemented on each lane}
+	\end{figure}
+Multipurpose cameras are used for video processing. These cameras are specially made for the implementation of AI and used for the traffic detection. The camera will continuously check the lane provided in front of it, The conventionally used countdown based timer sequence will signal the roads and empty the lanes according to the timer based operation. The control will use real-time image processing and process the captured image from the camera. The control will generate three virtual rectangular frames in the view of the camera. The system will detect traffic as the boxes are filled in by vehicles. \\Multipurpose cameras are used for video processing. These cameras are specially made for the implementation of AI and used for the traffic detection. The camera will continuously check the lane provided in front of it, The conventionally used countdown based timer sequence will signal the roads and empty the lanes according to the timer based operation. The control will use real-time image processing and process the captured image from the camera. The control will generate three virtual rectangular frames in the view of the camera. The system will detect traffic as the boxes are filled in by vehicles.\\
+\vspace{5pt}
+\textbf{For every single lane:}
+\begin{figure}[h]
+	\includegraphics[height=430pt]{int.png}
+\end{figure}
+\newpage
+\subsection{\LARGE Machine Learning}
+Machine learning can be referred to as an application of artificial intelligence which is used to train artificial intelligence to take data as input and process it based on how the AI or artificial intelligence is trained \\ Here we use machine learning to detect the emergency service vehicles. We train machine to detect the emergency service vehicles like ambulance ,fire brigade tanks etc. If an emergency vehicle is detected on a road then that road will the given a green signal until the emergency service vehicle passes the junction. After the emergency service vehicle passes, the signal will continue to function normally where it stopped.\\
+\vspace{5pt}
+\textbf{For emergency servicies:}
+\begin{figure}[h]
+	\includegraphics[height=320pt]{img.png}
+\end{figure}
+\newpage
+\section{\huge Feasibility}
+The traditional automatic signalling system has been there for a long time. But as the number of private vehicles is increasing day by day this traditional signalling system is failing to solve traffic jams. Most of the time emergency services like ambulances get stuck in traffic and create a life or death scenario. So, the solution for this problem is to create an AI-based traffic signalling system. The system will detect the lane with a higher number of vehicles and will adjust the signal delay accordingly. This system will also have the priority for the emergency services. This system can be implemented in metropolitan cities like Mumbai, Bengaluru etc. where people suffer from traffic daily. \\
+\section{\huge Reference}
+\href{https://www.news18.com/news/india/the-single-statistic-that-shows-why-indian-roads-aregetting-more-congested-each-passing-month-2031835.html }{[1] web article by  news18.com}
+
+  
+	
+		
+	\end{flushleft}
+
+	
+	
+
+
+
+
+	
+	
+\end{document}
